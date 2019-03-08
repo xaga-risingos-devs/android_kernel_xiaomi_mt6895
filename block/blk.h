@@ -253,7 +253,11 @@ int blk_dev_init(void);
  */
 static inline bool blk_do_io_stat(struct request *rq)
 {
+#if 0
 	return rq->rq_disk && (rq->rq_flags & RQF_IO_STAT);
+#else
+	return false;
+#endif
 }
 
 static inline void req_set_nomerge(struct request_queue *q, struct request *req)
