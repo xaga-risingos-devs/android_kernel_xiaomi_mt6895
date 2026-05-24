@@ -230,6 +230,7 @@ int __vfs_setxattr_noperm(struct dentry *dentry, const char *name,
 
 	return error;
 }
+EXPORT_SYMBOL_GPL(__vfs_setxattr_noperm);
 
 /**
  * __vfs_setxattr_locked - set an extended attribute while holding the inode
